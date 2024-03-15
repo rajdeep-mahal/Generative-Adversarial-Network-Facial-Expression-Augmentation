@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from modules import UpBlock2d, DownBlock2d
+from models.modules import UpBlock2d, DownBlock2d
 
 
 class Encoder(nn.Module):

@@ -1,8 +1,8 @@
 import torch
 import torch.nn as nn
 
-from modules import Vgg19, ImagePyramide
-from utils import Transform, detach_kp
+from models.modules import Vgg19, ImagePyramide
+from models.utils import Transform, detach_kp
 
 
 class GeneratorModel(nn.Module):
@@ -16,14 +16,14 @@ class GeneratorModel(nn.Module):
         self.disc_scales = self.discriminator.scales
         self.pyramid = ImagePyramide(self.scales, generator.num_channels)
         if torch.cuda.is_available():
-            self.pyramid = self.pyramid.cuda()
+            self.pyramid = self.pyramid.to("cuda")
 
         self.loss_weights = train_params['loss_weights']
 
         if sum(self.loss_weights['perceptual']) != 0:
             self.vgg = Vgg19()
             if torch.cuda.is_available():
-                self.vgg = self.vgg.cuda()
+                self.vgg = self.vgg.to("cuda")
 
     def forward(self, x):
         kp_source = self.kp_extractor(x['source'])
@@ -107,7 +107,7 @@ class DiscriminatorModel(nn.Module):
         self.scales = self.discriminator.scales
         self.pyramid = ImagePyramide(self.scales, generator.num_channels)
         if torch.cuda.is_available():
-            self.pyramid = self.pyramid.cuda()
+            self.pyramid = self.pyramid.to("cuda")
 
         self.loss_weights = train_params['loss_weights']
 

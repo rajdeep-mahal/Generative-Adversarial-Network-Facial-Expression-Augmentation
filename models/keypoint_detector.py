@@ -2,9 +2,9 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from hourglass import Hourglass
-from modules import AntiAliasInterpolation2d
-from utils import create_coordinate_grid
+from models.hourglass import Hourglass
+from models.modules import AntiAliasInterpolation2d
+from models.utils import create_coordinate_grid
 
 
 class KPDetector(nn.Module):
