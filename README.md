@@ -2,7 +2,7 @@
 Implementation of First order motion model for Image Animation paper
 
 ## Result
-![] (https://github.com/rajdeep-mahal/CSCI-566-Project-GAN/blob/main/results/output_video.mp4)
+![] (/results/output_video.mp4)
 
 
 ## Installation
