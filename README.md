@@ -1,5 +1,6 @@
-# First-order-motion-model
+# Generative Adversarial Network - Facial Expression Augmentation
 Implementation of First order motion model for Image Animation paper
+Link to the paper: https://arxiv.org/pdf/2104.11280.pdf
 
 ## Result
 https://github.com/rajdeep-mahal/CSCI-566-Project-GAN/assets/60407196/9e507685-af24-43bb-b4ae-581c882dc9f5
