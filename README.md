@@ -1,5 +1,5 @@
 # Generative Adversarial Network - Facial Expression Augmentation
-Implementation of First order motion model for Image Animation paper
+Implementation of First order motion model for Image Animation paper.
 Link to the paper: https://arxiv.org/pdf/2104.11280.pdf
 
 ## Result
